@@ -154,4 +154,12 @@ public class PlayerStatsScript : MonoBehaviour {
 //		}
 		
 	}
+
+	void OnTriggerEnter (Collider col)
+	{
+		if (col.gameObject.tag == "Enemy")
+		{
+			healthCurrent = healthCurrent - (col.gameObject.GetComponent<AIEnemyScript1>().doDamage);
+		}
+	}
 }
