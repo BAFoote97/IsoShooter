@@ -11,8 +11,8 @@ public class GunScript : MonoBehaviour {
 	public bool isCurrentWeapon;
 
 	public GameObject bulletEmitter;
-	public GameObject bulletEmitter2;
-	public GameObject bulletEmitter3;
+//	public GameObject bulletEmitter2;
+//	public GameObject bulletEmitter3;
 	public bool canShoot;
 	public float shootDelay = 0.1f;
 	public bool autoShoot;
@@ -117,58 +117,58 @@ public class GunScript : MonoBehaviour {
 						StartCoroutine (fireDelay ());
 
 					}
-					{
-						//Debug.Log ("Player fired");
-
-						//The Bullet Instantiation happens here.
-						GameObject Temporary_Bullet_handler;
-
-						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter2.transform.position, bulletEmitter2.transform.rotation) as GameObject;
-						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
-						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
-						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
-
-						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
-						Rigidbody Temporary_RigidBody;
-						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
-
-						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
-						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
-
-						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
-						Destroy (Temporary_Bullet_handler, bulletLifetime);
-
-
-
-					}
-					{
-						//Debug.Log ("Player fired");
-
-						//The Bullet Instantiation happens here.
-						GameObject Temporary_Bullet_handler;
-
-						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter3.transform.position, bulletEmitter3.transform.rotation) as GameObject;
-						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
-						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
-						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
-
-						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
-						Rigidbody Temporary_RigidBody;
-						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
-
-						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
-						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
-
-						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
-						Destroy (Temporary_Bullet_handler, bulletLifetime);
-
-
-
-					}
-					if (infiniteAmmo == false) {
-						ammoCount -= ammoSpend * Time.deltaTime;
-
-					}
+//					{
+//						//Debug.Log ("Player fired");
+//
+//						//The Bullet Instantiation happens here.
+//						GameObject Temporary_Bullet_handler;
+//
+//						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter2.transform.position, bulletEmitter2.transform.rotation) as GameObject;
+//						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
+//						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
+//						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
+//
+//						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
+//						Rigidbody Temporary_RigidBody;
+//						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
+//
+//						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
+//						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
+//
+//						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
+//						Destroy (Temporary_Bullet_handler, bulletLifetime);
+//
+//
+//
+//					}
+//					{
+//						//Debug.Log ("Player fired");
+//
+//						//The Bullet Instantiation happens here.
+//						GameObject Temporary_Bullet_handler;
+//
+//						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter3.transform.position, bulletEmitter3.transform.rotation) as GameObject;
+//						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
+//						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
+//						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
+//
+//						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
+//						Rigidbody Temporary_RigidBody;
+//						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
+//
+//						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
+//						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
+//
+//						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
+//						Destroy (Temporary_Bullet_handler, bulletLifetime);
+//
+//
+//
+//					}
+//					if (infiniteAmmo == false) {
+//						ammoCount -= ammoSpend * Time.deltaTime;
+//
+//					}
 
 				}
 			}
@@ -205,54 +205,54 @@ public class GunScript : MonoBehaviour {
 
 
 					}
-					{
-						//Debug.Log ("Player fired");
-
-						//The Bullet Instantiation happens here.
-						GameObject Temporary_Bullet_handler;
-
-						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter2.transform.position, bulletEmitter2.transform.rotation) as GameObject;
-						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
-						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
-						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
-
-						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
-						Rigidbody Temporary_RigidBody;
-						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
-
-						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
-						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
-
-						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
-						Destroy (Temporary_Bullet_handler, bulletLifetime);
-
-
-
-					}
-					{
-						//Debug.Log ("Player fired");
-
-						//The Bullet Instantiation happens here.
-						GameObject Temporary_Bullet_handler;
-
-						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter3.transform.position, bulletEmitter3.transform.rotation) as GameObject;
-						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
-						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
-						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
-
-						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
-						Rigidbody Temporary_RigidBody;
-						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
-
-						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
-						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
-
-						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
-						Destroy (Temporary_Bullet_handler, bulletLifetime);
-
-
-
-					}
+//					{
+//						//Debug.Log ("Player fired");
+//
+//						//The Bullet Instantiation happens here.
+//						GameObject Temporary_Bullet_handler;
+//
+//						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter2.transform.position, bulletEmitter2.transform.rotation) as GameObject;
+//						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
+//						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
+//						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
+//
+//						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
+//						Rigidbody Temporary_RigidBody;
+//						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
+//
+//						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
+//						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
+//
+//						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
+//						Destroy (Temporary_Bullet_handler, bulletLifetime);
+//
+//
+//
+//					}
+//					{
+//						//Debug.Log ("Player fired");
+//
+//						//The Bullet Instantiation happens here.
+//						GameObject Temporary_Bullet_handler;
+//
+//						Temporary_Bullet_handler = Instantiate (Bullet, bulletEmitter3.transform.position, bulletEmitter3.transform.rotation) as GameObject;
+//						//Sometimes bullets may appear rotated incorrectly due to the way its pivot was set from the original modeling package.
+//						//This is EASILY corrected here, you might have to rotate it from a different axis and/or angle based on your particular mesh.
+//						Temporary_Bullet_handler.transform.Rotate (Vector3.left);
+//
+//						//Retrieve the Rigidbody component from the instantiated Bullet and control it.
+//						Rigidbody Temporary_RigidBody;
+//						Temporary_RigidBody = Temporary_Bullet_handler.GetComponent<Rigidbody> ();
+//
+//						//Tell the bullet to be "pushed" forward by an amount set by Bullet_Forward_Force.
+//						Temporary_RigidBody.AddForce (transform.forward * Bullet_Forward_Force, ForceMode.Impulse);
+//
+//						//Basic Clean Up, set the Bullets to self destruct after 10 Seconds, I am being VERY generous here, normally 3 seconds is plenty.
+//						Destroy (Temporary_Bullet_handler, bulletLifetime);
+//
+//
+//
+//					}
 					canShoot = false;
 
 
